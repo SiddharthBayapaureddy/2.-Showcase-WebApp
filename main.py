@@ -27,7 +27,19 @@ col3,col4 = st.columns(2)
 with col3:
     for index, row in df[:10].iterrows():
         st.header(row['title'])
+        st.info(row['description'])
+        photo = f'images/{row['image']}'
+        print(photo)
+        st.image(photo)
+       
+        
+
+
 
 with col4:
     for index, row in df[10:].iterrows():
         st.header(row['title'])
+        st.info(row['description'])
+        photo = f'images/{row['image']}'
+        print(photo)
+        st.image(photo)
